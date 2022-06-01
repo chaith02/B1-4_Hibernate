@@ -14,8 +14,9 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 @Entity
 @Table(name="EMP_STORE1")
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
-
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="emp_type",discriminatorType=DiscriminatorType.STRING)
+@DiscriminatorValue("EMP")
 public class Employee implements Serializable{
 	private static final long serialVersionUID=1L;
 	@Id

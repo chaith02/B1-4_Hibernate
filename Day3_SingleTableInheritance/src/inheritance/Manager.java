@@ -1,10 +1,10 @@
 package inheritance;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="EMP_STORE1")
+@DiscriminatorValue("MGR")
 public class Manager extends Employee 
 {
 	private static final long serialVersionUID=1L;
